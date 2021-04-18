@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongodb = require("mongodb");
-const URL = "mongodb+srv://tejas:Tejas11@cluster0.vpuuy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const URL = process.env.DB;
 const DB = "urlshortner";
 const bcrypt = require("bcryptjs");
 const jwt =require("jsonwebtoken");
