@@ -2,10 +2,11 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongodb = require("mongodb");
-const URL = process.env.DB;
+const URL = "mongodb+srv://tejas:Tejas11@cluster0.vpuuy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const DB = "urlshortner";
 const bcrypt = require("bcryptjs");
 const jwt =require("jsonwebtoken");
+require('dotenv').config()
 
 app.use(cors())
 app.use(express.json());
