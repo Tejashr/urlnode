@@ -24,31 +24,6 @@ function generateUrl() {
     return rand;
 }
 
-// function authenticate(req, res, next) {
-    
-//     if (req.headers.authorization) {
-
-//         try {
-//             let jwtValid = jwt.verify(req.headers.authorization, "qwertyuiopasdfghjklzxcvbnm");
-//             if (jwtValid) {
-//                 req.userId = jwtValid._id;
-//                 next();
-//             }
-//         } catch (error) {
-//             res.status(401).json({
-//                 message: "Invalid Token"
-//             })
-//         }
-
-//     }
-//     else {
-//         res.status(401).json({
-//             message: "No Token Present"
-//         })
-//     }
-
-  
-// }
 
 app.get("/urlshort", async function (req, res) {
     try {
@@ -176,10 +151,5 @@ app.get("/userurl/:id", async function (req, res) {
     }
 })
 
-// app.get("/common", authenticate, (req, res) => {
 
-//     res.json({
-//         message: "common place"
-//     })
-// })
-app.listen(process.env.PORT||5000)
+app.listen(process.env.PORT|| 5000)
